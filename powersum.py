@@ -12,8 +12,33 @@
 
 def powerSum(n, k):
     # Your code goes here...
-    return 0
+    if n <= 0 or k < 0:
+        return 0
+    sum = 0
+    for i in range(1, n+1):
+        sum += i ** k
+
+    return sum
 
 # Write your own test cases here...
+count = 0
 
-print ("All test cases passed...")
+if(powerSum(4, 5) == 1300):
+    count += 1
+if(powerSum(4, 2) == 30):
+    count += 1
+if(powerSum(9, 3) == 2025):
+    count += 1
+if(powerSum(0, 3) == 0):
+    count += 1
+if(powerSum(9, 0) == 9):
+    count += 1
+if(powerSum(0, 0) == 0):
+    count += 1
+
+
+
+if count == 6:
+    print ("All test cases passed...")
+else:
+    print("%d testcases passed, %s failed" %(count, 6-count))
