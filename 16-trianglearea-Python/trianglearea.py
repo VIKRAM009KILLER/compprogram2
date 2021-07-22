@@ -6,4 +6,12 @@
 
 def trianglearea(s1, s2, s3):
 	# your code goes here
+	sp = (s1 +s2 +s3)/2
+	product = sp * (sp-s1) * (sp-s2) * (sp-s3)
+
+	area = product ** (1/2)
+
+	return area
+
+    
 	pass
