@@ -7,4 +7,27 @@
 
 def islegaltriangle(s1, s2, s3):
 	# your code goes here
+	if s1 > s2:
+		if s1 > s3:
+			largest = s1
+			a = s2
+			b = s3
+		else:
+			largest = s3
+			a = s2
+			b = s1
+	else:
+		if s2 > s3:
+			largest = s2
+			a = s3
+			b = s1
+		else:
+			largest = s3
+			a = s2
+			b = s1
+	if a+b > largest:
+		return True
+	else:
+		return False
+	
 	pass
