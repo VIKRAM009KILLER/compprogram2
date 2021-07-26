@@ -6,4 +6,12 @@
 
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	# your code goes here
-	return False 
+	rad_sum = r1 + r2
+	radsq = rad_sum ** 2
+
+	dis_sq = (x1-x2)**2 + (y1-y2)**2
+
+	if dis_sq <= radsq:
+		return True
+	else:
+		return False 
