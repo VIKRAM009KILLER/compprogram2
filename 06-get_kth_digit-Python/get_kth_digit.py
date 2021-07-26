@@ -6,4 +6,14 @@
 
 
 def fun_get_kth_digit(digit, k):
+	n = abs(digit)
+
+	count = 0
+
+	while n != 0:
+		d = n % 10
+		if count == k:
+			return d
+		count += 1
+		n = n // 10
 	return 0
