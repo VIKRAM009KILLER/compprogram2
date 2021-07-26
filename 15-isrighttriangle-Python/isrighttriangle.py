@@ -5,6 +5,22 @@
 # distance(x1, y1, x2, y2), which you might call several times. Also, remember to use
 # almostEqual (instead of ==) when comparing floats.
 
+def distance(x1, y1, x2, y2):
+	ds = (x1-x2) ** 2 + (y1-y2) ** 2
+    
+
+	return ds
+
 def isrighttriangle(x1, y1, x2, y2, x3, y3):
 	# your code goes here
+
+	a = distance(x1, y1, x2, y2)
+	b = distance(x1, y1, x3, y3)
+	c = distance(x2, y2, x3, y3)
+    
+	if a == b+c or b == a+c or c == a+b:
+		return True
+	else:
+		return False
+
 	pass
