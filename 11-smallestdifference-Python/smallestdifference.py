@@ -6,4 +6,18 @@
 
 def smallestdifference(a):
 	# Your code goes here
+	if a == []:
+		return -1
+	limit = 10 ** 100
+	a.sort()
+	for i in range(0, len(a)-1):
+		for j in range(i+1, len(a)):
+			m = abs(a[i] - a[j])
+			if m < limit:
+				limit = m
+	
+	return limit
+
+
+
 	pass
