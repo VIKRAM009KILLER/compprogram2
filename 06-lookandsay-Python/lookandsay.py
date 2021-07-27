@@ -11,4 +11,22 @@
 
 def lookandsay(a):
 	# Your code goes here
+	newlist = []
+	demolist = []
+	for i in a:
+		if i not in demolist:
+
+			demolist.append(i)
+			count = a.count(i)
+			pair = (count, i)
+			newlist.append(pair)
+
+	
+
+
+	
+
+	# newlist = list(set(newlist))
+
+	return newlist
 	pass
