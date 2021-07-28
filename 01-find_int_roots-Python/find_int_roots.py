@@ -8,6 +8,13 @@
 
 import math
 def fun_find_int_roots(a, b, c):
-	return 0, 0
+
+	d = b ** 2 - 4 * a * c
+	det = math.sqrt(d)
+
+	root1 = (-b + det) / 2 * a
+	root2 = (-b - det) / 2 * a
+
+	return int(root2), int(root1)
 
 
