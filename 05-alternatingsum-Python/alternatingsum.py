@@ -5,7 +5,19 @@
 
 
 
-def fun_alternatingsum(a): 
-	return 0
+def fun_alternatingsum(a):
+
+	if a == []:
+	    return 0
+
+	num = a.pop(0)
+	new = []
+	for i in a:
+	    i = i * -1
+	    new.append(i)
+	    
+# 	print(new)
+
+	return num + + fun_alternatingsum(new)
 
 
