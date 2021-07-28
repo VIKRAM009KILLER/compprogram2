@@ -15,4 +15,62 @@
 
 def ismostlymagicsquare(a):
 	# Your code goes here
+	d1 = 0
+	d2 = 0
+	n = len(a[0])
+
+	if len(a[0]) <= 1:
+		return True
+
+	rowsum = sum(a[0])
+	
+	colsum = 0
+
+	for i in range(0, len(a)):
+		colsum += a[i][0]
+
+	
+    	
+	for i in range(len(a)):
+	
+		
+		s = sum(a[i])
+
+		if s != rowsum:
+			return False
+		s1 = 0
+		
+		for j in range(0, len(a[0])):
+			s1 += a[i][j]
+
+			if i == j:
+				d1 += a[i][j]
+
+			if j == (n-1) - i:
+				d2 += a[i][j]
+
+
+	if d1 != d2 or s != s1 or d1 != s:
+		return False
+
+	return True
+
+
+
+
+			
+
+		
+        
+		
+
+			
+
+		
+
+
+
+
+
+
 	pass
