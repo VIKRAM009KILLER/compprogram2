@@ -15,5 +15,47 @@
 # assert(nth_happy_number(8) == 31)
 
 
+def digilist(n):
+	dlist = []
+	while(n != 0):
+		d = n % 10
+		n = n // 10
+		dlist.append(d)
+	return dlist
+
+
+
+def isHappy(n):
+	num = digilist(n)
+	newnum = sum(map(lambda i : i * i, num))
+	
+	while (newnum > 0):
+		num = digilist(newnum)
+		newnum = sum(map(lambda i : i * i, num))
+		if newnum == 1:
+			return True
+		if newnum < 10:
+			return False
+		
+
+
+
+
+
+	
+
+
+
 def nth_happy_number(n):
+	count = 0
+	m = 10 ** 50
+	
+	for i in range(0, m):
+		if(isHappy(i)):
+				count += 1
+		if count == n:
+			return i
+
 	return 0
+
+
