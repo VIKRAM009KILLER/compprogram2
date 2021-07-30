@@ -17,6 +17,29 @@
 # assert(ishappynumber(404) == True)
 # assert(ishappynumber(405) == False)
 
+
+def digilist(n):
+	dlist = []
+	while(n != 0):
+		d = n % 10
+		n = n // 10
+		dlist.append(d)
+	return dlist
+
+
+
+
+	
 def ishappynumber(n):
 	# your code goes here
+	num = digilist(n)
+	newnum = sum(map(lambda i : i * i, num))
+	
+	while (newnum > 0):
+		num = digilist(newnum)
+		newnum = sum(map(lambda i : i * i, num))
+		if newnum == 1:
+			return True
+		if newnum < 10:
+			return False
 	pass
