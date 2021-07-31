@@ -8,7 +8,7 @@
 
 def fun_carrylessadd(x, y):
 
-    newnum = []
+    str1 = ""
     while(x != 0):
         if y != 0:
             dx = x % 10
@@ -16,16 +16,18 @@ def fun_carrylessadd(x, y):
             m = dx+dy
             if m >= 10:
                 m = m-10
-            newnum.append(m)
+            str1 += str(m)
             x = x // 10
             y = y // 10
+            # print(str1)
+            
         else:
-            continue
-    number = 0
-    for i in range(len(newnum)):
-        d = newnum[i] * 10**i
-        number += d
-    return number		
+            m = x
+            str1 += str(m)
+            break
+            # print(str1)
+            
+    return int(str1[::-1])	
 
 			
 				
