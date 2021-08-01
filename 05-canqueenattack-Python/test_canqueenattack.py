@@ -12,3 +12,5 @@ import pytest
 ])
 def test_canqueenattack(a, b, c, d, result):
 	assert canqueenattack(a, b, c, d) == result
+
+
