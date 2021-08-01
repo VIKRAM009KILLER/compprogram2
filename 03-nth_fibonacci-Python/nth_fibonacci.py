@@ -9,4 +9,34 @@
 
 def fun_nthfibonaccinumber(n):
 	# your code goes Here
+	new = []
+	if n == 0:
+		return 1
+	if n == 1:
+		return 1
+	count = 1
+	m = 10 ** 10
+
+	for i in range(0, m):
+		if i < 2:
+			new.append(1)
+		else:
+			num = new[i-1] + new[i-2]
+			new.append(num)
+			count += 1
+			
+		if count == n:
+			return new[i]
+
+		
+		
+
+
+
+
+
+
+	
+
+
 	return 0
