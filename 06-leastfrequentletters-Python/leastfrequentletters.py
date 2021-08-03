@@ -9,4 +9,19 @@
 
 def leastfrequentletters(s):
 	# Your code goes here
+	mincount = 10 ** 10
+	s = s.lower()
+	for i in s:
+		c = s.count(i)
+		if c < mincount:
+			mincount = c
+	str1 = ''
+	for j in s:
+		c = s.count(j)
+		if c == mincount:
+			if ord(j) >= 97 and ord(j) <= 122:
+				str1 += j
+	str1 = ''.join(sorted(str1))
+	return str1
+
 	pass
