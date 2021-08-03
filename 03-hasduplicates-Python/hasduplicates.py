@@ -5,4 +5,22 @@
 
 def hasduplicates(L):
 	# Your code goes here
-	pass
+	p = len(L)
+	q = len(L[0])
+	new = []
+	for i in range(0, p):
+		for j in range(0, q):
+			value1 = L[i][j]
+			print(value1)
+			new.append(value1)
+	for i in new:
+	    c = new.count(i)
+	    if c > 1:
+	        return True
+			
+			
+	return False
+
+			
+
+	return False
