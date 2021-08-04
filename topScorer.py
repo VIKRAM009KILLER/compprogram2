@@ -16,6 +16,23 @@
 
 def topScorer(data):
     # Your code goes here...
+    if data == "":
+        return None
+    str1 = data.splitlines()
+    a = str1[0].split(',')
+    b = str1[1].split(',')
+    sa = sumlist(a)
+    sb = sumlist(b)
+    new = ""
+    if sa == sb:
+        new += a[0] +","+ b[0]
+        
+        return new
+    # return str1
+    if sa > sb:
+        return a[0]
+    if sa < sb:
+        return b[0]
     return ""
 
 data = '''\
