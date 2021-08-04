@@ -6,6 +6,47 @@
 
 def bestQuiz(l):
     # Your  code goes ehre...
+    s0 = 0
+    s1 = 0
+    s2 = 0
+    count0 = 0
+    count1 = 0
+    count2 = 0
+    for i in range(len(l)):
+        for j in range(len(l[0])):
+            num = l[i][j]
+            if j == 0 and num != -1:
+                s0 += num
+                count0 += 1
+            if j == 1 and num != -1:
+                s1 += num
+                count1 += 1
+            if j == 2 and num != -1:
+                s2 += num
+                count2 += 1
+    if count1 != 0:
+        s1 = s1 / count1
+    if count0 != 0:
+        s0 = s0 / count0
+    if count2 != 0:
+        s2 = s2 / count2
+    # print(s1)
+    
+               
+    if s1 > s2 and s1 > s0 or s1 == s2 and s1 > s0:
+        return 1
+    if s1 > s2 and s1 > s0 or s1 == s0 and s1 > s2:
+        return 0
+        
+    if s0 > s2 and s0 > s1 or s0 > s2 and s0 == s1 or s0 > s1 and s0 == s1:
+        return 0
+    if s2 > s1 and s2 > s0:
+        return 2
+    
+    
+        
+            
+    
     pass
 
 def testBestQuiz():
