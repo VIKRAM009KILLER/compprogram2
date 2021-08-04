@@ -17,7 +17,37 @@
 
 
 def fun_wordwrap(s, n):
-	return ""
+	count = 0
+	flag = 0
+	news = ''
+	s = s.strip()
+	print(s)
+	for i in s:
+	   # print(news)
+	    if i == " ":
+	        news += "-"
+	        count += 1
+	        if count == n:
+	            news += "\n"
+	            count = 0
+	    else:
+	        news += i
+	        count += 1
+	        if count == n:
+	            news += "\n"
+	            count = 0
+	if news[-1] == "\n":
+	    news = news[:-1]
+	            
+	return news
+			
+				
+
+		
+			
+		
+
+	
 
 
  
