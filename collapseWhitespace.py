@@ -16,7 +16,29 @@
 
 def cw(s):
     # Your code goes here...
-    return ""
+    new = ""
+    count = 0
+    for i in s:
+        l = ord(i)
+        if l >= 97 and l <= 122 or l >= 65 and l <= 90:
+            new += i
+            count = 0
+        if i == " ":
+            count += 1
+            if count == 1:
+                new += i
+        if i == "\n" or i == "\t":
+            if count == 0:
+                new += " "
+                count += 1
+                
+            
+            
+        
+    # print(new)
+    
+    return new
+    
 
 assert(cw("a\nb") == "a b")
 assert(cw("a\n   \t    b") == "a b")
