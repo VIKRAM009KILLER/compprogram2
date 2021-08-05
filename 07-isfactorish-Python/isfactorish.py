@@ -12,5 +12,21 @@
 
 
 def fun_isfactorish(n):
-	return False
+	n = abs(n)
+	a = str(n)
+	if len(a) != 3:
+		return False
+	new = []
+
+	for i in a:
+		new.append(i)
+	for i in new:
+		if int(i) == 0:
+			return False
+		c = new.count(i)
+		if c > 1:
+			return False
+		if n % int(i) != 0:
+			return False
+	return True
 
