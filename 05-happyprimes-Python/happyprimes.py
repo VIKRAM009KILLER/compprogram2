@@ -9,6 +9,35 @@
 # Note: the autograder will grade each of the following functions, so they are required. 
 # However, they also are here specifically because they are just the right helper 
 # functions to make nthHappyNumber(n) easier to write!
+def digisum(n):
+    sum = 0
+    x = str(n)
+    for i in x:
+        sum += int(i) ** 2
+    return sum
+
+def isPrime(n):
+    if n <= 1:
+        return False
+    for i in range(2, n):
+        if n % i == 0:
+            return False
+    return True
+
 def ishappyprimenumber(n):
     # Your code goes here
+    sum = 0
+    num = n
+
+    while(True):
+        if sum == 1:
+            if(isPrime(n)):
+                return True
+        if sum < 10 and sum != 0:
+            break
+        sum = digisum(num)
+        num = sum
+
+    return False
+
     pass
