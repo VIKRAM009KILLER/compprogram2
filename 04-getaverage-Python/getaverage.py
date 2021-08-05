@@ -9,6 +9,24 @@
 
 
 
-def fun_getaverage(s): 
-	return 0.0
+def fun_getaverage(s):
+	sum = 0
+	a = s.split(",")
+	count = 0
+
+	for i in a:
+		try:
+		    sum += int(i)
+		    count += 1
+		except ValueError:
+		    sum = sum + 0
+		    
+		    
+			
+			
+	if sum == 0:
+	    return 0.0
+	    
+	    
+	return sum / count
 
