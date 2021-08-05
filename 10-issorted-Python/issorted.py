@@ -6,5 +6,28 @@
 # the list.
 
 def issorted(a):
+	if a == []:
+		return True
+	x = a[0]
+	cs = 0
+	cg = 0
+	for i in range(1, len(a)):
+		if a[i] < x:
+			x = a[i]
+			cs += 1
+			continue
+		if a[i] == x:
+			i += 1
+			continue
+		if a[i] > x:
+			x = a[i]
+			cg += 1
+			continue
+	if cg == 0 or cs == 0:
+		return True
+	else:
+		return False
+
+
 	# your code goes here
 	pass
