@@ -9,5 +9,40 @@
 
 import math
 
+def isKarpekar(n):
+    num = n ** 2
+    if num < 10:
+        return False
+    # print(num)
+    x = str(num)
+    # print(x)
+    
+    
+    a = len(x) // 2
+    while(a >= 1):
+         n1 = int(x[:a])
+         n2 = int(x[a:])
+         if n1 == 0 or n2 == 0:
+             return False
+         newnum = n1 + n2
+         if newnum == n:
+             return True
+         a -= 1
+             
+    return False
+           
+        
 def fun_nth_kaprekarnumber(n):
-    return 1;
+    if n == 0:
+        return 1
+    # if n == 1:
+    #     return 9
+
+    count = 0
+    m = 10 ** 50
+    for i in range(2, m):
+        if(isKarpekar(i)):
+            print(i)
+            count += 1
+        if count == n:
+            return i
