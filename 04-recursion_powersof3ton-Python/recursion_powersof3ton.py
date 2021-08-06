@@ -5,4 +5,28 @@
 
 def recursion_powersof3ton(n):
 	# Your code goes here
+	n = int(n)
+	if n < 1:
+	    return None
+	if n == 1:
+	    return [1]
+	    
+# 	if n-3 < 0:
+# 		return recursion_powersof3ton(n-3) + [1]
+	else:
+		if n % 3 == 0:
+		    return recursion_powersof3ton(n // 3) + [n]
+				
+		else:
+		    for i in range(1, n+1):
+		        if 3 ** i > n:
+		            num = 3 ** (i-1)
+		            print(num)
+		            return recursion_powersof3ton(num)
+				# break
+		
+# 		return recursion_powersof3ton(a) + [num]
+
+	pass
+
 	pass
