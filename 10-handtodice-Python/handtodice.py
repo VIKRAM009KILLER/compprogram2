@@ -7,4 +7,15 @@
 
 def handtodice(hand):
 	# your code goes here
+	x = (0, 0, 0)
+	y = list(x)
+	for i in range(3):
+		dig = hand % 10
+		hand = hand // 10
+		y[i] = dig
+	
+	y.reverse()
+	x = tuple(y)
+
+	return x
 	pass
